@@ -24,6 +24,10 @@ type Bot struct {
 	logger        *log.Logger
 }
 
+func (bot *Bot) GetToken()string{
+	return bot.api.token.AccessToken
+}
+
 func (bot *Bot) GetApi() *API {
 	return bot.api
 }

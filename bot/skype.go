@@ -24,6 +24,10 @@ type Bot struct {
 	logger        *log.Logger
 }
 
+func (bot *Bot) GetApi() *API {
+	return bot.api
+}
+
 // Handle processes incoming request and passes it to handler
 func (bot *Bot) handleActivity(activity *skypeapi.Activity) error {
 	msg := &Activity{activity: activity}
